@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: student-info-service
+#  cloud:
+#    config:
+#      uri: http://localhost:8769
+#      fail-fast: true
+#  profiles:
+#    active: pro
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.108.36.161:3306/sys-user?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: ToBridges2020@mysql
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    publisher-confirms: true
+    virtual-host: /
+  cloud:
+    loadbalancer:
+      retry:
+        enabled=:
+          true
+
+server:
+  port: 8081
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
