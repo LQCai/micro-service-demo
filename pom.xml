@@ -16,6 +16,8 @@
         <module>security-service</module>
         <module>service-demo-1</module>
         <module>service-demo-2</module>
+        <module>monitor-service</module>
+        <module>admin-service</module>
     </modules>
     <packaging>pom</packaging>
 

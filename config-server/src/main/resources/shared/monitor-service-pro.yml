@@ -11,7 +11,7 @@ management:
         allowed-methods: "*"
 
 turbine:
-  app-config: blog-service,user-service
+  app-config: service-demo-1,service-demo-2
   aggregator:
     clusterConfig: default
   clusterNameExpression: new String("default")
